@@ -1,0 +1,33 @@
+html{
+	min-height:100%;
+	min-width:100%;
+}
+body{
+	max-width: 100%;
+    overflow-x: hidden;
+    height:500px;
+
+}
+
+#video{
+	text-align:center;
+}
+
+#form{
+	text-align:center;
+}
+
+h2{
+	font-family:'Jura',sans-serif !important;
+	position: fixed;
+	top:25px;
+	left: 5%;
+    color: white !important;
+}
+
+input[type="button"] {
+	color: white;
+    background-color: black;
+    text-decoration: none;
+    border: black;
+}

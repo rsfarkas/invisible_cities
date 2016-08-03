@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- colosus by pat vale https://vimeo.com/129648476 -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Invisible Cities</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+</head>
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>"As this wave from memories flows in, the city soaks it up like a sponge and expands.”</h2>
+		<div id="video">
+			<video id="colosus" min-width="500px" width="100%">
+				<source src="colosus-lapse.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div id="form">
+			<textarea rows="4" cols="55" id="memory" placeholder="Record your memory:"></textarea>
+			<br>
+			<input type="button" value="submit" onclick="setTime()"><br>
+		</div>
+	</div>
+</div>	
+	<script>
+		var vid = document.getElementById("colosus");
+		var len = 0;
+
+		function timeChecker() {
+			if (vid.currentTime >= len * .25) {
+				vid.pause();
+			}
+		};
+
+		function setTime() {
+			len = document.getElementById("memory").value.length;
+			vid.addEventListener("timeupdate", timeChecker); 
+			vid.play();
+		};
+
+	</script>
+
+</body>
+</html>
+
